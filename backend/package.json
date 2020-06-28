@@ -10,6 +10,8 @@
     "dev:server": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/server.ts"
   },
   "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "bcryptjs": "^2.4.3",
     "date-fns": "^2.14.0",
     "express": "^4.17.1",
     "pg": "^8.2.1",
