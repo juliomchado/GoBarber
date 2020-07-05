@@ -1,8 +1,8 @@
-import { Router } from 'express'
+import { Router } from 'express';
 
-const sessionsRouter = Router()
+import AuthenticateUserService from '../services/AuthenticateUserService';
 
-import AuthenticateUserService from '../services/AuthenticateUserService'
+const sessionsRouter = Router();
 
 sessionsRouter.post('/', async (request, response) => {
   const { email, password } = request.body;
@@ -12,13 +12,11 @@ sessionsRouter.post('/', async (request, response) => {
   const { user, token } = await authenticateUser.execute({
     email,
     password,
-  })
+  });
 
   delete user.password;
 
   return response.json({ user, token });
-
-
 });
 
 export default sessionsRouter;
