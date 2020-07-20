@@ -24,7 +24,7 @@ interface SignInFormData {
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const { signIn } = useAuth();
+  const { signIn, signOut } = useAuth();
   const { addToast } = useToast();
 
   const handleSubmit = useCallback(
@@ -47,6 +47,8 @@ const SignIn: React.FC = () => {
           email: data.email,
           password: data.password,
         });
+
+        await signOut()
 
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
