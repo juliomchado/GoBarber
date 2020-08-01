@@ -19,7 +19,7 @@ type IResponse = Array<{
 class ListProviderDayAvailabilityService {
   constructor(
     @inject('AppointmentsRepository')
-    private appointmentRepository: IAppointmentsRepository,
+    private appointmentsRepository: IAppointmentsRepository,
   ) {}
 
   public async execute({
@@ -28,7 +28,7 @@ class ListProviderDayAvailabilityService {
     month,
     day,
   }: IRequest): Promise<IResponse> {
-    const appointments = await this.appointmentRepository.findAllInDayFromProvider(
+    const appointments = await this.appointmentsRepository.findAllInDayFromProvider(
       {
         provider_id,
         year,
@@ -47,7 +47,7 @@ class ListProviderDayAvailabilityService {
     const currentDate = new Date(Date.now());
 
     const availability = eachHourArray.map(hour => {
-      const hasAppointmenInHour = appointments.find(
+      const hasAppointmentInHour = appointments.find(
         appointment => getHours(appointment.date) === hour,
       );
 
@@ -55,7 +55,7 @@ class ListProviderDayAvailabilityService {
 
       return {
         hour,
-        available: !hasAppointmenInHour && isAfter(compareDate, currentDate),
+        available: !hasAppointmentInHour && isAfter(compareDate, currentDate),
       };
     });
 

@@ -18,7 +18,7 @@ type IResponse = Array<{
 class ListProviderMonthAvailabilityService {
   constructor(
     @inject('AppointmentsRepository')
-    private appointmentRepository: IAppointmentsRepository,
+    private appointmentsRepository: IAppointmentsRepository,
   ) {}
 
   public async execute({
@@ -26,7 +26,7 @@ class ListProviderMonthAvailabilityService {
     year,
     month,
   }: IRequest): Promise<IResponse> {
-    const appointments = await this.appointmentRepository.findAllInMonthFromProvider(
+    const appointments = await this.appointmentsRepository.findAllInMonthFromProvider(
       {
         provider_id,
         year,
@@ -37,9 +37,7 @@ class ListProviderMonthAvailabilityService {
     const numberOfDaysInMonth = getDaysInMonth(new Date(year, month - 1));
 
     const eachDayArray = Array.from(
-      {
-        length: numberOfDaysInMonth,
-      },
+      { length: numberOfDaysInMonth },
       (_, index) => index + 1,
     );
 
