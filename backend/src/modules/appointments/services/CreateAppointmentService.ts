@@ -2,11 +2,9 @@ import { startOfHour, isBefore, getHours, format } from 'date-fns';
 import { injectable, inject } from 'tsyringe';
 
 import AppError from '@shared/errors/AppError';
-
 import INotificationsRepository from '@modules/notifications/repositories/INotificationsRepository';
-import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
-
 import Appointment from '../infra/typeorm/entities/Appointment';
+import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 
 interface IRequest {
   provider_id: string;
@@ -59,11 +57,11 @@ class CreateAppointmentService {
       date: appointmentDate,
     });
 
-    const dateFormated = format(appointmentDate, "dd-MM-yyyy 'ás' HH:mm'h'");
+    const dateFormatted = format(appointmentDate, "dd/MM/yyyy 'às' HH:mm'h'");
 
     await this.notificationsRepository.create({
       recipient_id: provider_id,
-      content: `Novo agendamento para dia ${dateFormated}`,
+      content: `Novo agendamento para dia ${dateFormatted}`,
     });
 
     return appointment;
