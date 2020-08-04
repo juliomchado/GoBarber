@@ -109,3 +109,27 @@ The Backend and Frotend developed for me in the GoStack bootcamp.
 > <p align="center">
 >  <img src="https://user-images.githubusercontent.com/56945282/89332731-cf9a1000-d68b-11ea-901a-d527acf88f14.png">
 > </p>
+
+### MOBILE
+> **Splash**
+> <p align="center">
+>  <img src="https://user-images.githubusercontent.com/56945282/89332996-3c150f00-d68c-11ea-9a09-9993beae1c06.png">
+> </p> 
+
+> **Logon**
+> <p align="center">
+>  <img src="https://user-images.githubusercontent.com/56945282/89334510-8a2b1200-d68e-11ea-9872-6f1571832603.png">
+> </p> 
+
+> **Register**
+> <p align="center">
+>  <img src="https://user-images.githubusercontent.com/56945282/89334540-99aa5b00-d68e-11ea-8ff2-9272526e7c33.png">
+> </p> 
+
+> **List**
+> <p align="center">
+>  <img src="https://user-images.githubusercontent.com/56945282/89334607-b5adfc80-d68e-11ea-8c40-5a6be79d92b5.png">
+> </p> 
+
+
+
