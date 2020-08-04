@@ -7,7 +7,8 @@ GoBarber is a project developed to schedule hairdressing schedules.
 The Backend and Frotend developed for me in the GoStack bootcamp.
 
 ## Technologies and Libraries: 
-**Frontend Web:** 
+### Frontend Web: 
+* React
 * React.js
 * react-icons
 * react-spring
@@ -17,12 +18,65 @@ The Backend and Frotend developed for me in the GoStack bootcamp.
 * @unform/web
 * axios
 * uuidv4
-* yup 
+* yup (data validation)
 * typescript
 * axios
-* eslint
+
+### Frontend Mobile:
+* React
+* React-native
+* react-native-vector-icons
+* react-native-gesture-handler
+* react-navigation/native
+* react-navigation/stack
+* @unform/core
+* @unform/mobile
+* axios
+* styled-components
+* yup (data validation)
+* typescript
+
+### Backend:
+* Node
+* Express
+* bcryptjs
+* class-transformer
+* typescript
+* cors
+* handlebars
+* date-fns
+* multer
+* nodemailer
+* pg
+* rate-limiter-flexible
+* redis
+* uuidv4
+* tsyringe
+* typeorm
+* celebrate
+* docker
+
+**Databases:**
+* Postgres (General Datas)
+* Mongodb (Notifications)
+* Redis (Cache)
+
+## Data validations: 
+* Yup (frontend validation)
+* Celebrate (backend validation)
+
+### Code styles:
+* eslint (node configuration)
+* eslint (react.js configuration)
+* eslint (react-native configuration)
 * prettier
 * editorconfig
 
-**Frontend Mobile:**
-* React-native
+### Tests:
+* Jest (unitary test)
+
+### Security: 
+* uuidv4 (universally unique identifier) used in users id
+* bcryptjs to encrypt user password
+* rate-limiter-flexible to protect application of bruteforce attack
+* cors to protect api from external acess
