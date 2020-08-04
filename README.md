@@ -88,7 +88,7 @@ The Backend and Frotend developed for me in the GoStack bootcamp.
 * T.D.D
 * D.D.D
 
- ## Images
+ ## Images (Written in PT-BR)
  ### WEB
 > **Logon**
 > <p align="center">
@@ -130,6 +130,20 @@ The Backend and Frotend developed for me in the GoStack bootcamp.
 > <p align="center">
 >  <img src="https://user-images.githubusercontent.com/56945282/89334607-b5adfc80-d68e-11ea-8c40-5a6be79d92b5.png">
 > </p> 
+
+>**Profile**
+> <p align="center">
+>  <img src="https://user-images.githubusercontent.com/56945282/89334607-b5adfc80-d68e-11ea-8c40-5a6be79d92b5.png">
+> </p> 
+
+>**Schedules**
+> <p align="center">
+>  <img src="https://user-images.githubusercontent.com/56945282/89336370-3241da80-d691-11ea-95bd-93a29e4974aa.png">
+> </p> 
+> <p align="center">
+>  <img src="https://user-images.githubusercontent.com/56945282/89336398-3a9a1580-d691-11ea-85be-3834b4f0a170.png">
+> </p> 
+
 
 
 
