@@ -1,8 +1,8 @@
 import { inject, injectable } from 'tsyringe';
 
 import User from '@modules/users/infra/typeorm/entities/User';
-import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
 
+import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 
 interface IRequest {
