@@ -73,7 +73,7 @@ The Backend and Frotend developed for me in the GoStack bootcamp.
 * editorconfig
 
 ### Tests:
-* Jest (unitary test)
+* Jest (unitary test) with coverage actived
 
 ### Security: 
 * uuidv4 (universally unique identifier) used in users id
