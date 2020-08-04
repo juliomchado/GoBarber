@@ -61,7 +61,7 @@ The Backend and Frotend developed for me in the GoStack bootcamp.
 * Mongodb (Notifications)
 * Redis (Cache)
 
-## Data validations: 
+### Data validations: 
 * Yup (frontend validation)
 * Celebrate (backend validation)
 
@@ -80,3 +80,9 @@ The Backend and Frotend developed for me in the GoStack bootcamp.
 * bcryptjs to encrypt user password
 * rate-limiter-flexible to protect application of bruteforce attack
 * cors to protect api from external acess
+
+### Principles and design patterns: 
+* M.V.C
+* S.O.L.I.D
+* T.D.D
+* D.D.D
