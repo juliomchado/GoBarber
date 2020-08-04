@@ -145,5 +145,3 @@ The Backend and Frotend developed for me in the GoStack bootcamp.
 > </p> 
 
 
-
-
