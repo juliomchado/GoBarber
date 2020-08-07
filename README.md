@@ -133,7 +133,7 @@ The Backend and Frotend developed for me in the GoStack bootcamp.
 
 >**Profile**
 > <p align="center">
->  <img src="https://user-images.githubusercontent.com/56945282/89334607-b5adfc80-d68e-11ea-8c40-5a6be79d92b5.png">
+>  <img src="https://user-images.githubusercontent.com/56945282/89692845-adf78d80-d904-11ea-8a8a-0bb73f7d31c0.png">
 > </p> 
 
 >**Schedules**
