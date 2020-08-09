@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { FiPower, FiClock } from 'react-icons/fi';
 import {
@@ -8,14 +8,18 @@ import {
   HeaderContent,
   Content,
   Schedule,
-  Calendar,
   NextAppointment,
+  Section,
+  Appointment,
+  Calendar,
 } from './style';
 
 import logoImg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
 
 const Dashboard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   const { signOut, user } = useAuth();
 
   return (
@@ -60,6 +64,54 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </NextAppointment>
+          <Section>
+            <strong>Manhã</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                8:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/56945282?s=460&u=f5c954cee8b794aa1fb40bfd3aefca970b16646d&v=4"
+                  alt="Julio Machado"
+                />
+                <strong>Julio Machado</strong>
+              </div>
+            </Appointment>
+            <Appointment>
+              <span>
+                <FiClock />
+                8:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/56945282?s=460&u=f5c954cee8b794aa1fb40bfd3aefca970b16646d&v=4"
+                  alt="Julio Machado"
+                />
+                <strong>Julio Machado</strong>
+              </div>
+            </Appointment>
+          </Section>
+
+          <Section>
+            <strong>Tarde</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                8:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/56945282?s=460&u=f5c954cee8b794aa1fb40bfd3aefca970b16646d&v=4"
+                  alt="Julio Machado"
+                />
+                <strong>Julio Machado</strong>
+              </div>
+            </Appointment>
+          </Section>
         </Schedule>
         <Calendar />
       </Content>
