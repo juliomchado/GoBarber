@@ -1,19 +1,18 @@
 import React, { useCallback, useRef } from 'react';
 import {
-  Image, View, ScrollView, KeyboardAvoidingView, Platform, TextInput, Alert
+  Image, View, ScrollView, KeyboardAvoidingView, Platform, TextInput, Alert,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Feather';
 import { useNavigation } from '@react-navigation/native';
 
-
 import { Form } from '@unform/mobile';
 import { FormHandles } from '@unform/core';
-import * as Yup from 'yup'
+import * as Yup from 'yup';
 
-import { useAuth } from '../../hooks/auth'
+import { useAuth } from '../../hooks/auth';
 
-import getValidationErros from '../../utils/getValidationErrors'
+import getValidationErros from '../../utils/getValidationErrors';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -33,13 +32,13 @@ interface SignInFormData {
 
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
-  const passwordInputRef = useRef<TextInput>(null)
+  const passwordInputRef = useRef<TextInput>(null);
 
   const navigation = useNavigation();
 
-  const { signIn, user} = useAuth()
+  const { signIn, user } = useAuth();
 
-  console.log(user)
+  console.log(user);
 
   const handleSignIn = useCallback(
     async (data: SignInFormData) => {
@@ -61,8 +60,6 @@ const SignIn: React.FC = () => {
           email: data.email,
           password: data.password,
         });
-
-
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErros(err);
@@ -72,8 +69,7 @@ const SignIn: React.FC = () => {
         }
 
         Alert.alert('Erro na autenticação',
-          'Ocorreu um erro ao fazer o login, cheque as credenciais')
-
+          'Ocorreu um erro ao fazer o login, cheque as credenciais');
       }
     },
     [signIn],
