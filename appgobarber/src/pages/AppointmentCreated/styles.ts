@@ -35,5 +35,5 @@ export const OkButton = styled(RectButton)`
 export const OkButtonText = styled.Text`
   font-family: 'RobotoSlab-Regular';
   color: #312e38;
-  font-size: 18px;
+  font-size: 16px;
 `;
