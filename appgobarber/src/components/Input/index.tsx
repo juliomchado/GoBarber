@@ -1,5 +1,10 @@
 import React, {
-  useEffect, useRef, useState, useImperativeHandle, forwardRef, useCallback,
+  useEffect,
+  useRef,
+  useState,
+  useImperativeHandle,
+  forwardRef,
+  useCallback,
 } from 'react';
 
 import { TextInputProps } from 'react-native';
@@ -10,6 +15,7 @@ import { Container, TextInput, Icon } from './styles';
 interface InputProps extends TextInputProps {
   name: string;
   icon: string;
+  containerStyle?: {};
 }
 
 interface inputValueReference {
@@ -20,12 +26,13 @@ interface InputRef {
   focus(): void;
 }
 
-const Input: React.RefForwardingComponent<InputRef, InputProps> = ({ name, icon, ...rest }, ref) => {
+const Input: React.RefForwardingComponent<InputRef, InputProps> = (
+  { name, icon, containerStyle = {}, ...rest },
+  ref,
+) => {
   const inputElementRef = useRef<any>(null);
 
-  const {
-    registerField, defaultValue = '', fieldName, error,
-  } = useField(name);
+  const { registerField, defaultValue = '', fieldName, error } = useField(name);
 
   const inputValueRef = useRef<inputValueReference>({ value: defaultValue });
 
@@ -65,8 +72,12 @@ const Input: React.RefForwardingComponent<InputRef, InputProps> = ({ name, icon,
   }, [fieldName, registerField]);
 
   return (
-    <Container isFocused={isFocused} isErrored={!!error}>
-      <Icon name={icon} size={20} color={isFocused || isFilled ? '#ff9000' : '#666360'} />
+    <Container style={containerStyle} isFocused={isFocused} isErrored={!!error}>
+      <Icon
+        name={icon}
+        size={20}
+        color={isFocused || isFilled ? '#ff9000' : '#666360'}
+      />
 
       <TextInput
         ref={inputElementRef}
@@ -75,7 +86,9 @@ const Input: React.RefForwardingComponent<InputRef, InputProps> = ({ name, icon,
         defaultValue={defaultValue}
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
-        onChangeText={(value) => { inputValueRef.current.value = value; }}
+        onChangeText={value => {
+          inputValueRef.current.value = value;
+        }}
         {...rest}
       />
     </Container>

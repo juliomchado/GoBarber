@@ -153,5 +153,6 @@ export const CreateAppointmentButton = styled(RectButton)`
 export const CreateAppointmentButtonText = styled.Text`
   font-family: 'RobotoSlab-Medium';
   font-size: 18px;
+  text-align: center;
   color: #232129;
 `;
