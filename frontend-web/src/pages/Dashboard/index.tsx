@@ -113,6 +113,8 @@ const Dashboard: React.FC = () => {
     });
   }, [selectedDate]);
 
+  {"oi"}
+
   const selectedWeekDay = useMemo(() => {
     return format(selectedDate, 'cccc', { locale: ptBR });
   }, [selectedDate]);
